@@ -20,17 +20,12 @@
 - Use **async/await (or equivalent)** for network, file, or database I/O.
 - Avoid blocking calls in request handlers or main loops.
 
-### 5. Fail Fast with Clear Errors
-- Validate inputs **early**.
-- Return or throw **explicit errors** with clear messages and status codes.
-- Do **not silently swallow failures**.
-
-### 6. Hallucination Reduction
+### 5. Hallucination Reduction
 - When producing factual claims (versions, API behavior, release dates, benchmarks, legal text, metrics) include a short **source** comment or mark the claim as **[UNVERIFIED]** if a reliable source isn't known.
 - If a claim cannot be confidently produced from local repo context, return a clear placeholder: `// TODO: verify` or `[UNVERIFIED]` rather than inventing facts.
 - For external API behavior, prefer returning a minimal, conservative example and add `// SOURCE: <url>` comment when known.
 
-### 7. Keep Examples Local / Repo-first
+### 6. Keep Examples Local / Repo-first
 - Prefer to rely on files in the repository (package.json, pyproject.toml, README) to answer questions about the project. If repository lacks the info, mark as [UNVERIFIED] rather than guessing.
 
 
